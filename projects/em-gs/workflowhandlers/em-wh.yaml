@@ -2,7 +2,7 @@ apiVersion: eaas.envmgmt.io/v1
 kind: WorkflowHandler
 metadata:
   name: em-wh
-  project: em-gs
+  project: mdp
 spec:
   config:
     function:
