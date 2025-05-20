@@ -9,11 +9,16 @@ spec:
       language: python
       name: em-wh
       skipBuild: false
-      source: "from typing import *\nfrom logging import Logger\n\ndef handle(logger:
-        Logger,request: Dict[str, Any]) -> Dict[str, Any]:\n  logger.info(f\"inside
-        function handler, request: {request}\", extra={\"request\": request})\n\t\n
-        \ logger.info(\"Hello world... \")\n\t\n  return {\n    \"output\": \"Hello
-        world\"\n  }\n"
+      source: |
+        from typing import Dict, Any
+        from logging import Logger
+
+        def handle(logger: Logger, request: Dict[str, Any]) -> Dict[str, Any]:
+            logger.info(f"inside function handler, request: {request}", extra={"request": request})
+            logger.info("Hello world... ")
+            return {
+                "output": "Hello world"
+            }
       targetPlatforms:
-      - linux/amd64
+        - linux/amd64
     type: function
