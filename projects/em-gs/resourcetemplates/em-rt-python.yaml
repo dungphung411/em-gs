@@ -1,0 +1,21 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: ResourceTemplate
+metadata:
+  name: em-rt-python
+  project: em-gs
+spec:
+  provider: custom
+  providerOptions:
+    custom:
+      tasks:
+      - agents:
+        - name: em-gs
+        executeOnce: true
+        name: python-code
+        onFailure: unspecified
+        options: {}
+        type: workflowHandler
+        workflowHandler:
+          name: em-wh
+  version: v1
+  versionState: draft
