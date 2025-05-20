@@ -1,0 +1,22 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: ResourceTemplate
+metadata:
+  name: em-rt
+  project: mdp
+spec:
+  agents:
+  - name: em-gs
+  contexts:
+  - name: em-cc
+  provider: opentofu
+  providerOptions:
+    openTofu:
+      backendType: system
+  repositoryOptions:
+    branch: main
+    directoryPath: /terraform/
+    name: em-gs
+  version: v1
+  versionState: draft
+
+  
