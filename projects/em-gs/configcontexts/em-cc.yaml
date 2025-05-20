@@ -1,0 +1,19 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: ConfigContext
+metadata:
+  name: em-cc
+  project: mdp
+spec:
+  envs:
+  - key: TF_VAR_access_key
+    options:
+      override:
+        type: notallowed
+    value: accesskey123
+  - key: TF_VAR_secret
+    options:
+      mask: true
+      override:
+        type: notallowed
+      sensitive: true
+    value: tempvalue
