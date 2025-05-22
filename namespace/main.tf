@@ -11,7 +11,7 @@ resource "rafay_namespace" "oach" {
     placement {
       labels {
         key   = "rafay.dev/clusterName"
-        value = "oach"
+        value = "vmware-cluster-mdp"
       }
     }
   }
