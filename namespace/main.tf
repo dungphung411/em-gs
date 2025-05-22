@@ -1,8 +1,8 @@
 #Basic example for namespace
 resource "rafay_namespace" "oach" {
   metadata {
-    name    = "oachoach"
-    project = "mdpmdp"
+    name    = "oach"
+    project = "mdp"
   }
   spec {
     drift {
